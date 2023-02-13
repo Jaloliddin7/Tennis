@@ -23,7 +23,6 @@ let img = document.createElement('img')
 
 function test () {
     finish = select.value
-    console.log(finish);
 }
 function time () {
     setTimeout(function() {
@@ -56,6 +55,7 @@ player1Btn.addEventListener('click' , ()=> {
     }
 })
 
+
 player2Btn.addEventListener('click' , ()=> {
     if (!gameover) {
         oneshot2++ 
@@ -76,6 +76,7 @@ player2Btn.addEventListener('click' , ()=> {
 })
 
 resetBtn.addEventListener("click" , ()=>{
+
     title.textContent = `Stol Tennis`
     player2Title.style.color = "#123456"
     player1Title.style.color = "#123456"
@@ -86,7 +87,23 @@ resetBtn.addEventListener("click" , ()=>{
     player2Title.textContent = 0 
     player1Title.textContent = 0 
     randomFunc()
-    audio.pause()
 
+})
+
+
+
+
+select.addEventListener('click' , ()=>{
+
+        title.textContent = `Stol Tennis`
+    player2Title.style.color = "#123456"
+    player1Title.style.color = "#123456"
+
+    oneshot1 = 0
+    oneshot2 = 0
+    gameover = false
+    player2Title.textContent = 0 
+    player1Title.textContent = 0 
+    randomFunc()
 
 })
